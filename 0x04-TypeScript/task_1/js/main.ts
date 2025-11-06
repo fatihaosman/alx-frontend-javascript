@@ -1,4 +1,5 @@
 interface Teacher {
+<<<<<<< HEAD
   firstName: string;
   lastName: string;
   fullTimeEmployee: boolean;
@@ -72,4 +73,23 @@ class StudentClass {
 const student = new StudentClass("Alice", "Smith");
 console.log(student.displayName()); // Alice
 console.log(student.workOnHomework()); // Currently working
+=======
+  readonly firstName: string;
+  readonly lastName: string;
+  fullTimeEmployee: boolean;
+  yearsOfExperience?: number;
+  location: string;
+  [key: string]: any;
+}
+
+const teacher3: Teacher = {
+  firstName: 'John',
+  fullTimeEmployee: false,
+  lastName: 'Doe',
+  location: 'London',
+  contract: false,
+};
+
+console.log(teacher3);
+>>>>>>> Add task_1 Teacher interface implementation
 
