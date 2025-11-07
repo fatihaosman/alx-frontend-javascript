@@ -78,3 +78,21 @@ console.log(createEmployee('$500')); // Director
 console.log(executeWork(createEmployee(200)));   // "Getting to work"
 console.log(executeWork(createEmployee(1000)));  // "Getting to director tasks"
 
+// 7. String literal types
+
+// Only allow 'Math' or 'History'
+type Subjects = 'Math' | 'History';
+
+// Function to teach a class
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  } else {
+    return 'Teaching History';
+  }
+}
+
+// Example usage
+console.log(teachClass('Math'));    // Teaching Math
+console.log(teachClass('History')); // Teaching History
+
