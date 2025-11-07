@@ -10,7 +10,7 @@ interface Directors extends Teacher {
   numberOfReports: number;
 }
 
-const director1: Directors = {
+const director: Directors = {
   firstName: 'John',
   lastName: 'Doe',
   location: 'London',
