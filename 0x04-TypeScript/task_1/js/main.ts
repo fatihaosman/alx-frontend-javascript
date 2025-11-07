@@ -50,7 +50,7 @@ interface StudentClassInterface {
 }
 
 // Class implementation
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   firstName: string;
   lastName: string;
 
