@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // 5. Advanced types Part 1
 
 // DirectorInterface
@@ -63,6 +64,8 @@ function createEmployee(salary: number | string): Director | Teacher {
 console.log(createEmployee(200));   // Teacher
 console.log(createEmployee(1000));  // Director
 console.log(createEmployee('$500')); // Director
+=======
+>>>>>>> Add task_2 folder with main.ts
 
 // Assuming Director and Teacher classes already exist from Task 5
 
