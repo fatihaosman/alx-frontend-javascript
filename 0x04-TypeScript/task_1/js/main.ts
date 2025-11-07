@@ -28,7 +28,7 @@ interface printTeacherFunction {
 
 // Function implementation
 function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
-  return `${firstNam}. ${lastName}`;
+  return `${firstName}. ${lastName}`;
 }
 
 
