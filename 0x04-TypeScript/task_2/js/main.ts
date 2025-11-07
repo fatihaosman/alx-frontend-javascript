@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // 5. Advanced types Part 1
 
 // DirectorInterface
@@ -36,7 +36,7 @@ class Teacher implements TeacherInterface {
     return 'Cannot work from home';
   }
 
-  getCoffeeBreak(): string {
+  getCoffeeBreak(): string {  
     return 'Cannot have a break';
   }
 
@@ -45,13 +45,12 @@ class Teacher implements TeacherInterface {
   }
 }
 
+// createEmployee function
 function createEmployee(salary: number | string): Director | Teacher {
-  // convert string to number first, if necessary
   if (typeof salary === "string") {
     salary = parseInt(salary.replace("$", ""));
   }
 
-  // exactly what the checker wants
   if (salary < 500) {
     return new Teacher();
   } else {
@@ -59,23 +58,13 @@ function createEmployee(salary: number | string): Director | Teacher {
   }
 }
 
-
-// Example usage
-console.log(createEmployee(200));   // Teacher
-console.log(createEmployee(1000));  // Director
-console.log(createEmployee('$500')); // Director
-=======
->>>>>>> Add task_2 folder with main.ts
-
-// Assuming Director and Teacher classes already exist from Task 5
-
 // 1. Type predicate to check if an employee is a Director
-function isDirector(employee: Director | Teacher): employee is Director {
+export function isDirector(employee: Director | Teacher): employee is Director {
   return employee instanceof Director;
 }
 
 // 2. Execute work depending on employee type
-function executeWork(employee: Director | Teacher): string {
+export function executeWork(employee: Director | Teacher): string {
   if (isDirector(employee)) {
     return employee.workDirectorTasks();
   } else {
@@ -83,7 +72,10 @@ function executeWork(employee: Director | Teacher): string {
   }
 }
 
-// Example usage:
+// Example usage
+console.log(createEmployee(200));   // Teacher
+console.log(createEmployee(1000));  // Director
+console.log(createEmployee('$500')); // Director
 console.log(executeWork(createEmployee(200)));   // "Getting to work"
 console.log(executeWork(createEmployee(1000)));  // "Getting to director tasks"
 
