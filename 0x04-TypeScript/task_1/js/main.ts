@@ -28,9 +28,10 @@ interface printTeacherFunction {
 
 // Function implementation
 function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
-  return `${firstName.charAt(0)}. ${lastName}`;
+  return `${firstNam}. ${lastName}`;
 }
 
 
 // Example usage
 console.log(printTeacher("John", "Doe")); // Output: J. Doe
+ 
