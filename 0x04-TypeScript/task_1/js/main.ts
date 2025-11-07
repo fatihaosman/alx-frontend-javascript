@@ -26,7 +26,7 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Function printTeacher(firstName, lastName) =>$
+ function printTeacher(firstName, lastName) =>$
   return `${firstName.charAt(0)}. ${lastName}`;
 };
 
